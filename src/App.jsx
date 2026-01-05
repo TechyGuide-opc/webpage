@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 //import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 //import './App.css'
@@ -25,21 +25,21 @@ import AIRoboticLabICSE from './ForschoolsPages/AI-RoboticLabICSE.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <Router>
-      <Header/>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/impact-program" element={<ImpactProgram />} />
-        <Route path="/i-bot" element={<IBoTPage />} />
-        <Route path="/ai-roboticslab-cbse" element={<AIRoboticsLabCBSEPage />} />
-        <Route path="/ai-roboticslab-icse" element={<AIRoboticLabICSEPage />} />
-        <Route path="/franchise" element={<FranchisePageWrapper />} />
-      </Routes>
-      <ScrollToTop/>
-      <WhatsAppButton/>
-    </Router>
-  )
+ return (
+  <>
+    <Header/>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/impact-program" element={<ImpactProgram />} />
+      <Route path="/i-bot" element={<IBoTPage />} />
+      <Route path="/ai-roboticslab-cbse" element={<AIRoboticsLabCBSEPage />} />
+      <Route path="/ai-roboticslab-icse" element={<AIRoboticLabICSEPage />} />
+      <Route path="/franchise" element={<FranchisePageWrapper />} />
+    </Routes>
+    <ScrollToTop/>
+    <WhatsAppButton/>
+  </>
+)
 }
 
 function HomePage() {
