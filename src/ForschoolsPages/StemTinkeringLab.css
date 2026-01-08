@@ -197,8 +197,8 @@
    ========================================= */
 .stem-tinkering-lab-root .hero-section {
   position: relative;
-  min-height: 90vh;
-  background: #0a5ab1;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 130, 115, 0.86) 85%, rgba(255, 255, 255, 0.86) 100%);
   color: #fff;
   display: flex;
   align-items: center;
@@ -231,14 +231,14 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 60px 20px;
 }
 
 .stem-tinkering-lab-root .hero-text { flex: 1; max-width: 600px; }
 
 .stem-tinkering-lab-root .brand-tag {
-  background: rgba(31, 2, 2, 0.82);
+  background: rgb(255, 255, 255);
   padding: 8px 16px;
   border-radius: 30px;
   display: inline-flex;
@@ -247,6 +247,11 @@
   margin-bottom: 30px;
   font-size: 0.9rem;
   border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Ensure the label text inside brand tag is visible on white background */
+.stem-tinkering-lab-root .brand-tag span {
+  color: #000;
 }
 
 .stem-tinkering-lab-root .hero-logo { height: 24px; }
@@ -265,6 +270,17 @@
   margin-bottom: 40px;
   color: #cbd5e1;
   font-weight: 300;
+}
+
+.stem-tinkering-lab-root .hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: relative;
+  transform: translateY(-10px);
+  z-index: 4;
 }
 
 .stem-tinkering-lab-root .hero-visual {
@@ -1077,7 +1093,7 @@
 @media (max-width: 768px) {
   .stem-tinkering-lab-root .hero-container { flex-direction: column; text-align: center; }
   .stem-tinkering-lab-root .hero-text h1 { font-size: 2.5rem; }
-  .stem-tinkering-lab-root .hero-btns { justify-content: center; }
+  .stem-tinkering-lab-root .hero-btns { justify-content: center; transform: none; margin-top: 0; }
   .stem-tinkering-lab-root .floating-badge { top: -20px; left: 50%; transform: translateX(-50%); width: max-content; }
   
   .stem-tinkering-lab-root .guidelines-grid { grid-template-columns: 1fr; }

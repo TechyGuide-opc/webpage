@@ -195,7 +195,7 @@
 .ai-roboticlab-icse-root .hero-section {
 	position: relative;
 	min-height: 90vh;
-	background: #0a5ab1;
+	background: linear-gradient(to bottom, rgba(0, 130, 115, 0.86) 75%, rgba(255, 255, 255, 0.86) 100%);
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -237,7 +237,7 @@
 }
 
 .ai-roboticlab-icse-root .brand-tag {
-	background: rgba(255,255,255,0.1);
+	background: rgb(255, 255, 255);
 	padding: 8px 16px;
 	border-radius: 30px;
 	display: inline-flex;
@@ -246,6 +246,11 @@
 	margin-bottom: 30px;
 	font-size: 0.9rem;
 	border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Ensure brand tag label is readable on white */
+.ai-roboticlab-icse-root .brand-tag span {
+	color: #000;
 }
 
 .ai-roboticlab-icse-root .hero-logo { height: 24px; }

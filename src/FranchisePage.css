@@ -1,7 +1,7 @@
 /* ============ 1. VARIABLES & CORE RESET ============ */
 :root {
     --primary-orange: #f5a623;
-    --primary-blue: #003366;
+    --primary-blue: #000000;
     --accent-teal: #00cec9;
     --accent-purple: #6c5ce7;
     
@@ -63,7 +63,7 @@
 /* ============ 4. HERO SECTION ============ */
 .franchise-page .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     background: url('src/assets/franchisepageimages/creates.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex; align-items: center; justify-content: center;
@@ -73,7 +73,7 @@
 
 .franchise-page .hero::before {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(0, 51, 102, 0.85) 0%, rgba(0, 15, 30, 0.95) 100%);
+    background: linear-gradient(to bottom, rgba(0, 130, 115, 0.86) 80%, rgba(255, 255, 255, 0.86) 100%);
     z-index: 1;
 }
 

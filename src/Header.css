@@ -1,6 +1,6 @@
 /* Top Bar */
 .top-bar {
-    background-color: var(--primary-color);
+    background-color: #008273;
     color: var(--white);
     padding: 8px 0;
     font-size: 0.9rem;
@@ -87,7 +87,7 @@ nav ul li a:hover {
 
 /* Button in Nav */
 .btn-nav {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--white) !important;
     padding: 8px 20px;
     border-radius: 20px;

@@ -97,9 +97,8 @@ function ImpactProgram() {
           style={{
             backgroundImage: `linear-gradient(
               to bottom,
-              rgba(10, 50, 120, 0.9) 0%,
-              rgba(10, 90, 177, 0.85) 62%,
-              rgba(255, 255, 255, 0.98) 100%
+              rgba(0, 130, 115, 0.86) 75%,
+              rgba(255, 255, 255, 0.86) 100%
             ), url(${images.bg2})`,
           }}
         >
