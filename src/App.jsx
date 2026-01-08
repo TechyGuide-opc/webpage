@@ -21,9 +21,10 @@ import ScrollToTop from './ScrollToTop.jsx'
 import WhatsAppButton from './WhatsAppButton.jsx'
 import AIRoboticsLabCBSE from './ForschoolsPages/AI-RoboticLabCBSE.jsx'
 import AIRoboticLabICSE from './ForschoolsPages/AI-RoboticLabICSE.jsx'
+import StemTinkeringLab from './ForschoolsPages/StemTinkeringLab.jsx'
 import CoursesPage from './coursesPage.jsx'
 import ShopPage from './ShopPage.jsx'
-import CheckOutPage from './assets/ShopPageImages/checkOutPage.jsx'
+import CheckOutPage from './CheckOutPage.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +38,7 @@ function App() {
       <Route path="/i-bot" element={<IBoTPage />} />
       <Route path="/ai-roboticslab-cbse" element={<AIRoboticsLabCBSEPage />} />
       <Route path="/ai-roboticslab-icse" element={<AIRoboticLabICSEPage />} />
+      <Route path="/schools/stem-tinkering-lab" element={<StemTinkeringLabPage />} />
       <Route path="/franchise" element={<FranchisePageWrapper />} />
       <Route path="/courses" element={<CoursesPageWrapper />} />
       <Route path="/shop" element={<ShopPageWrapper />} />
@@ -96,6 +98,15 @@ function AIRoboticLabICSEPage() {
   return (
     <>
       <AIRoboticLabICSE />
+      <FooterSection />
+    </>
+  );
+}
+
+function StemTinkeringLabPage() {
+  return (
+    <>
+      <StemTinkeringLab />
       <FooterSection />
     </>
   );

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './checkOutPage.css';
+import './CheckOutPage.css';
 
 const CheckOutPage = () => {
 	const navigate = useNavigate();

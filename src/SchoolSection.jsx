@@ -101,7 +101,7 @@ function SchoolSection() {
                   </ul>
                   <div>
                     <Link
-                      to="/ai-roboticslab-cbse"
+                      to="/schools/stem-tinkering-lab"
                       style={{ textDecoration: 'underline', fontWeight: 700, color: 'var(--accent-color)' }}
                     >
                       Explore STEM Labs

@@ -98,7 +98,7 @@ function Header() {
                 <ul className="dropdown-menu">
                   <li><Link to="/ai-roboticslab-cbse" onClick={closeMenu}>AI & Robotics Lab CBSE</Link></li>
                   <li><Link to="/ai-roboticslab-icse" onClick={closeMenu}>AI & Robotics Lab ICSE</Link></li>
-                  <li><a href="#" onClick={closeMenu}>STEM Tinkering Lab </a></li>
+                  <li><Link to="/schools/stem-tinkering-lab" onClick={closeMenu}>STEM Tinkering Lab</Link></li>
                   <li><a href="#" onClick={closeMenu}>STEM Lab </a></li>
                   <li><a href="#" onClick={closeMenu}>Workshop</a></li>
                   <li><a href="#" onClick={closeMenu}>Composite Skill Lab</a></li>
