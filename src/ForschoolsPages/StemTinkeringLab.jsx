@@ -766,34 +766,34 @@ function StemTinkeringLab() {
             <form id="enquiryForm">
               <div className="form-group">
                 <label htmlFor="schoolName">School Name</label>
-                <input type="text" id="schoolName" required placeholder="Enter School Name" />
+                <input type="text" id="schoolName" name="schoolName" required placeholder="Enter School Name" />
               </div>
 
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="fullName">Name</label>
-                  <input type="text" id="fullName" required placeholder="Your Name" />
+                  <input type="text" id="fullName" name="fullName" required placeholder="Your Name" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="phoneNumber">Phone Number</label>
-                  <input type="tel" id="phoneNumber" required placeholder="Mobile Number" />
+                  <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Mobile Number" />
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="emailId">Email ID</label>
-                  <input type="email" id="emailId" required placeholder="email@example.com" />
+                  <input type="email" id="emailId" name="emailId" required placeholder="email@example.com" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="state">State</label>
-                  <input type="text" id="state" required placeholder="State" />
+                  <input type="text" id="state" name="state" required placeholder="State" />
                 </div>
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows="3" placeholder="Any specific requirement?"></textarea>
+                <textarea id="message" name="message" rows="3" placeholder="Any specific requirement?"></textarea>
               </div>
               
               <button type="submit" className="btn btn-full">Send via WhatsApp <i className="fab fa-whatsapp"></i></button>

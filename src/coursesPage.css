@@ -212,8 +212,8 @@
 
 .courses-page-root .info-flow-section {
     padding-top: 100px;
-    background: var(--bg-color);
-    color: #fff;
+    background: #ffffff;
+    color: #1e293b;
 }
 
 .courses-page-root .stat-item img { width: 45px; margin-bottom: 12px; }
@@ -711,8 +711,8 @@
    8. WHY CHOOSE SECTION
    ========================================= */
 .courses-page-root .info-flow-section {
-    background: var(--bg-color);
-    color: #fff;
+    background: #ffffff;
+    color: #1e293b;
     padding: 50px 0;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
@@ -724,7 +724,7 @@
     margin-bottom: 50px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #1e293b;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
 }
@@ -740,6 +740,7 @@
     align-items: center;
     margin-bottom: 40px;
     gap: 40px;
+    padding: 30px 0;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -748,12 +749,16 @@
 }
 
 .courses-page-root .flow-image {
-    flex: 1;
-    height: 400px;
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 35%;
+    height: auto;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
     filter: grayscale(40%);
     transition: all 0.5s ease;
-    border-radius: 4px;
+    border-radius: 16px;
+    margin: 0 auto;
 }
 
 .courses-page-root .flow-image img {
@@ -764,16 +769,19 @@
 }
 
 .courses-page-root .flow-text {
-    flex: 1;
+    flex: 0 0 50%;
     position: relative;
     padding: 20px;
-    transition: transform 0.4s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .courses-page-root .number {
     font-size: 5rem;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.187);
+    color: #00827359;
     position: absolute;
     top: -40px;
     left: 0;
@@ -782,13 +790,13 @@
 .courses-page-root .flow-text h3 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--accent-color);
+    color: rgba(1, 1, 1, 0.674);
 }
 
 .courses-page-root .flow-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--text-dim);
+    color: #334155;
 }
 
 .courses-page-root .underline {
@@ -914,8 +922,17 @@
     .courses-page-root .flow-row, .courses-page-root .flow-row.reverse {
         flex-direction: column;
         text-align: center;
+        padding: 20px 0;
     }
-    .courses-page-root .flow-image { width: 100%; height: 300px; }
+    .courses-page-root .flow-image { 
+        flex: 0 0 80%; 
+        width: 80%; 
+        max-width: 100%;
+        height: auto; 
+        aspect-ratio: 3 / 2; 
+        border-radius: 14px; 
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 800px) {

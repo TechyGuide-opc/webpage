@@ -1095,8 +1095,8 @@
 @media (max-width: 768px) {
   .stem-tinkering-lab-root .hero-container { flex-direction: column; text-align: center; }
   .stem-tinkering-lab-root .hero-text h1 { font-size: 2.5rem; }
-  .stem-tinkering-lab-root .hero-btns { justify-content: center; transform: none; margin-top: 0; }
-  .stem-tinkering-lab-root .floating-badge { top: -20px; left: 50%; transform: translateX(-50%); width: max-content; }
+  .stem-tinkering-lab-root .hero-btns { justify-content: center; transform: none; margin-top: 0; margin-bottom: 20px; }
+  .stem-tinkering-lab-root .floating-badge { display: none !important; }
   
   .stem-tinkering-lab-root .guidelines-grid { grid-template-columns: 1fr; }
   .stem-tinkering-lab-root .guide-card { flex-direction: column; }
@@ -1105,8 +1105,19 @@
 
   .stem-tinkering-lab-root .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   
-  .stem-tinkering-lab-root .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .stem-tinkering-lab-root .gallery-item.large { grid-column: auto; grid-row: auto; height: 250px; }
+  .stem-tinkering-lab-root .gallery-grid { 
+    grid-template-columns: 1fr !important; 
+    grid-template-rows: auto !important; 
+  }
+  .stem-tinkering-lab-root .gallery-item.large { 
+    grid-column: auto !important; 
+    grid-row: auto !important; 
+    height: 250px !important; 
+    min-height: 250px !important;
+  }
+  .stem-tinkering-lab-root .gallery-item.large img {
+    min-height: 250px !important;
+  }
   
   .stem-tinkering-lab-root .timeline-box { flex-direction: column; gap: 10px; }
   .stem-tinkering-lab-root .t-line { width: 2px; height: 30px; margin: 0 auto; }

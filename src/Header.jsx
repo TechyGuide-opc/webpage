@@ -1,16 +1,52 @@
 //import './Header.css'
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Logo from '/src/assets/logo.png'
 import './Header.css';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [schoolsOpen, setSchoolsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const headerRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setProductsOpen(false);
+    setSchoolsOpen(false);
+  };
+  
+  const toggleProductsDropdown = (e) => {
+    e.preventDefault();
+    setProductsOpen(prev => !prev);
+    setSchoolsOpen(false);
+  };
+  
+  const toggleSchoolsDropdown = (e) => {
+    e.preventDefault();
+    setSchoolsOpen(prev => !prev);
+    setProductsOpen(false);
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    if (menuOpen || productsOpen || schoolsOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuOpen, productsOpen, schoolsOpen]);
 
   const handleLogoClick = () => {
     closeMenu();
@@ -25,6 +61,8 @@ function Header() {
   const handleAnchorClick = (e, selector) => {
     e.preventDefault();
     closeMenu();
+    setProductsOpen(false);
+    setSchoolsOpen(false);
     
     // Check if target exists on current page
     const target = document.querySelector(selector);
@@ -66,7 +104,7 @@ function Header() {
         </div>
       </div>
 
-      <header>
+      <header ref={headerRef}>
         <div className="container nav-container">
           <div className="logo">
             <Link to="/" className="logo-link" onClick={handleLogoClick}>
@@ -78,10 +116,10 @@ function Header() {
             <ul id="nav-links" className={menuOpen ? 'active' : ''}>
 
               <li className="dropdown">
-                <a href="#shop" onClick={(e) => handleAnchorClick(e, '#shop')}>
+                <a href="#shop" onClick={toggleProductsDropdown}>
                   Products <i className="fas fa-chevron-down"></i>
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${productsOpen ? 'active' : ''}`}>
                   <li><a href="#" onClick={closeMenu}>TeBoT</a></li>
                   <li><Link to="/i-bot" onClick={closeMenu}>I-BoT</Link></li>
                   <li><a href="#" onClick={closeMenu}>E- Blox </a></li>
@@ -92,10 +130,10 @@ function Header() {
               <li><Link to="/courses" onClick={closeMenu}>Courses</Link></li>
               
               <li className="dropdown">
-                <a href="#schools" onClick={(e) => handleAnchorClick(e, '#schools')}>
+                <a href="#schools" onClick={toggleSchoolsDropdown}>
                   Schools <i className="fas fa-chevron-down"></i>
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${schoolsOpen ? 'active' : ''}`}>
                   <li><Link to="/ai-roboticslab-cbse" onClick={closeMenu}>AI & Robotics Lab CBSE</Link></li>
                   <li><Link to="/ai-roboticslab-icse" onClick={closeMenu}>AI & Robotics Lab ICSE</Link></li>
                   <li><Link to="/schools/stem-tinkering-lab" onClick={closeMenu}>STEM Tinkering Lab</Link></li>

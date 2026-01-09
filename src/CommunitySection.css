@@ -98,12 +98,48 @@
 }
 
 @media (max-width: 768px) {
+	.testimonials {
+		padding: 50px 0;
+	}
+
 	.testimonial-card {
-		width: 270px;
-		padding: 16px;
+		width: 280px;
+		padding: 18px;
 	}
 
 	.testimonial-track {
 		animation-duration: 30s;
+		gap: 20px;
+	}
+
+	.quote-icon {
+		font-size: 2.5rem;
+	}
+
+	.testimonial-card p {
+		font-size: 0.72rem;
+	}
+
+	.info h4 {
+		font-size: 0.78rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.testimonials {
+		padding: 40px 0;
+	}
+
+	.testimonial-card {
+		width: 260px;
+		padding: 16px;
+	}
+
+	.testimonial-track {
+		animation-duration: 25s;
+	}
+
+	.quote-icon {
+		font-size: 2rem;
 	}
 }

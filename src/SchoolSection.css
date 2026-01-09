@@ -99,6 +99,74 @@
 	width: 100%;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.schools-section {
+		padding: 50px 0;
+	}
+
+	.school-tab-header {
+		gap: 5px;
+		padding: 0 10px;
+	}
+
+	.school-tab-link {
+		padding: 10px 15px;
+		font-size: 0.9rem;
+		min-width: auto;
+		flex: 1 1 45%;
+	}
+
+	.school-content-box {
+		padding: 25px 20px;
+		margin: 0 15px;
+	}
+
+	.tab-grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.tab-text h3 {
+		font-size: 1.5rem;
+	}
+
+	.school-desc {
+		font-size: 0.95rem;
+	}
+
+	.school-list li {
+		padding-left: 20px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.schools-section {
+		padding: 40px 0;
+	}
+
+	.school-tab-header {
+		flex-direction: column;
+	}
+
+	.school-tab-link {
+		padding: 12px;
+		font-size: 0.85rem;
+		border-radius: 8px;
+		width: 100%;
+	}
+
+	.school-content-box {
+		padding: 20px 15px;
+		margin: 0 10px;
+	}
+
+	.tab-text h3 {
+		font-size: 1.3rem;
+	}
+}
+
 @keyframes fadeEffect {
 	from {opacity: 0; transform: translateY(10px);} 
 	to {opacity: 1; transform: translateY(0);} 

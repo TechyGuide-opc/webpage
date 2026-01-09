@@ -1160,8 +1160,8 @@
 @media (max-width: 768px) {
 	.ai-roboticlab-icse-root .hero-container { flex-direction: column; text-align: center; }
 	.ai-roboticlab-icse-root .hero-text h1 { font-size: 2.5rem; }
-	.ai-roboticlab-icse-root .hero-btns { justify-content: center; }
-	.ai-roboticlab-icse-root .floating-badge { top: -20px; left: 50%; transform: translateX(-50%); width: max-content; }
+	.ai-roboticlab-icse-root .hero-btns { justify-content: center; margin-bottom: 20px; }
+	.ai-roboticlab-icse-root .floating-badge { display: none !important; }
     
 	.ai-roboticlab-icse-root .guidelines-grid { grid-template-columns: 1fr; }
 	.ai-roboticlab-icse-root .guide-card { flex-direction: column; }

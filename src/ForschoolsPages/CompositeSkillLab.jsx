@@ -504,21 +504,21 @@ export default function CompositeSkillLab() {
             <form id="enquiryForm">
               <div className="form-group">
                 <label htmlFor="schoolName">School Name</label>
-                <input type="text" id="schoolName" required placeholder="Enter School Name" />
+                <input type="text" id="schoolName" name="schoolName" required placeholder="Enter School Name" />
               </div>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="fullName">Name</label>
-                  <input type="text" id="fullName" required placeholder="Principal / Manager" />
+                  <input type="text" id="fullName" name="fullName" required placeholder="Principal / Manager" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="phoneNumber">Phone</label>
-                  <input type="tel" id="phoneNumber" required placeholder="Mobile Number" />
+                  <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Mobile Number" />
                 </div>
               </div>
               <div className="form-group">
                 <label htmlFor="affiliationType">Affiliation Status</label>
-                <select id="affiliationType">
+                <select id="affiliationType" name="affiliationType">
                   <option>Applying for Fresh Affiliation</option>
                   <option>Applying for Upgradation</option>
                   <option>Already Affiliated (3-Year Compliance)</option>
@@ -526,7 +526,7 @@ export default function CompositeSkillLab() {
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" rows="3" placeholder="Available room size or specific questions?"></textarea>
+                <textarea id="message" name="message" rows="3" placeholder="Available room size or specific questions?"></textarea>
               </div>
               <button type="submit" className="btn btn-full">Get Quote via WhatsApp <i className="fab fa-whatsapp"></i></button>
             </form>

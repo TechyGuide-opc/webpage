@@ -70,12 +70,51 @@
 }
 
 @media (max-width: 768px) {
+	.robothrone {
+		padding: 50px 0;
+	}
+
 	.event-banner {
 		grid-template-columns: 1fr;
+		gap: 30px;
 	}
 
 	.event-image {
 		order: -1;
 		margin-bottom: 20px;
+	}
+
+	.robothrone h2 {
+		font-size: 1.8rem;
+	}
+
+	.event-stats {
+		gap: 20px;
+		padding: 15px 0;
+	}
+
+	.e-stat strong {
+		font-size: 1.5rem;
+	}
+
+	.event-details-grid {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.robothrone {
+		padding: 40px 0;
+	}
+
+	.event-stats {
+		flex-direction: column;
+		gap: 15px;
+		text-align: center;
+	}
+
+	.e-stat strong {
+		font-size: 1.3rem;
 	}
 }
